@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Future Continuous</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/card.css">
+</head>
+
+<body class="bg-light">
+  <div class="container py-5 px-0">
+    <h1 class="mb-4">10. Future Continuous</h1>
+
+    <!-- Alert -->
+    <div class="alert alert-info mb-4">
+      <strong>Penjelasan:</strong><br>
+      • Menggambarkan aksi yang akan sedang berlangsung pada waktu tertentu di masa depan.<br><br>
+
+      <strong>Struktur:</strong><br>
+      ✅ (+) Subject + will + be + verb-ing <br>
+      ✅ (-) Subject + will + not + be + verb-ing <br>
+      ✅ (?) Will + subject + be + verb-ing? <br>
+
+      <strong>Ciri:</strong><br>
+      • Mengandung will be + verb-ing <br>
+      • Menunjukkan aksi sedang berjalan di masa depan <br>
+      • Sering disertai waktu spesifik: at 7 PM tomorrow, this time next week
+    </div>
+
+    <!-- Toggle Bahasa -->
+    <div class="mb-3">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="languageToggle" id="showIndonesian" value="indonesian"
+          checked>
+        <label class="form-check-label" for="showIndonesian">Sembunyikan Indonesian</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="languageToggle" id="showEnglish" value="english">
+        <label class="form-check-label" for="showEnglish">Sembunyikan English</label>
+      </div>
+    </div>
+
+    <!-- Tabel -->
+    <div class="table-responsive">
+      <table id="vocabTable" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="text-center" width="1">No</th>
+            <th class="text-left">English</th>
+            <th class="text-left">Indonesian</th>
+          </tr>
+        </thead>
+        <!-- ada 25 data -->
+        <tbody>
+          <tr>
+            <td class="text-center">1</td>
+            <td class="toggle-cell english-cell" data-value="I will be studying at 8 PM tonight."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya akan sedang belajar jam 8 malam nanti."></td>
+          </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td class="toggle-cell english-cell" data-value="She will be working late tomorrow."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia akan sedang bekerja lembur besok."></td>
+          </tr>
+          <tr>
+            <td class="text-center">3</td>
+            <td class="toggle-cell english-cell" data-value="They will be playing football at this time next Saturday.">
+            </td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Mereka akan sedang bermain sepak bola pada jam ini Sabtu depan."></td>
+          </tr>
+          <tr>
+            <td class="text-center">4</td>
+            <td class="toggle-cell english-cell" data-value="We will be traveling to Japan next week."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami akan sedang bepergian ke Jepang minggu depan.">
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">5</td>
+            <td class="toggle-cell english-cell" data-value="He will be driving to Bandung at 10 AM tomorrow."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Dia akan sedang mengemudi ke Bandung jam 10 pagi besok."></td>
+          </tr>
+          <tr>
+            <td class="text-center">6</td>
+            <td class="toggle-cell english-cell" data-value="I will be watching the concert live at 7 PM."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Saya akan sedang menonton konser secara langsung jam 7 malam."></td>
+          </tr>
+          <tr>
+            <td class="text-center">7</td>
+            <td class="toggle-cell english-cell" data-value="She will be teaching an online class at 3 PM."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia akan sedang mengajar kelas daring jam 3 sore."></td>
+          </tr>
+          <tr>
+            <td class="text-center">8</td>
+            <td class="toggle-cell english-cell" data-value="They will be having dinner when you arrive."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Mereka akan sedang makan malam ketika kamu tiba."></td>
+          </tr>
+          <tr>
+            <td class="text-center">9</td>
+            <td class="toggle-cell english-cell" data-value="We will be waiting for you at the airport."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami akan sedang menunggumu di bandara."></td>
+          </tr>
+          <tr>
+            <td class="text-center">10</td>
+            <td class="toggle-cell english-cell" data-value="He will be fixing his laptop all afternoon."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia akan sedang memperbaiki laptopnya sepanjang sore.">
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">11</td>
+            <td class="toggle-cell english-cell" data-value="I will be attending a meeting at 9 AM tomorrow."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya akan sedang menghadiri rapat jam 9 pagi besok.">
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">12</td>
+            <td class="toggle-cell english-cell" data-value="She will be cooking dinner when her parents come home.">
+            </td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Dia akan sedang memasak makan malam ketika orang tuanya pulang."></td>
+          </tr>
+          <tr>
+            <td class="text-center">13</td>
+            <td class="toggle-cell english-cell"
+              data-value="They will be hiking in the mountains this time next month."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Mereka akan sedang mendaki gunung pada jam ini bulan depan."></td>
+          </tr>
+          <tr>
+            <td class="text-center">14</td>
+            <td class="toggle-cell english-cell" data-value="We will be flying to Singapore at this time tomorrow.">
+            </td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Kami akan sedang terbang ke Singapura pada jam ini besok."></td>
+          </tr>
+          <tr>
+            <td class="text-center">15</td>
+            <td class="toggle-cell english-cell" data-value="He will be practicing guitar all evening."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia akan sedang berlatih gitar sepanjang malam."></td>
+          </tr>
+          <tr>
+            <td class="text-center">16</td>
+            <td class="toggle-cell english-cell" data-value="I will be sleeping when you call me tonight."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Saya akan sedang tidur ketika kamu meneleponku malam ini."></td>
+          </tr>
+          <tr>
+            <td class="text-center">17</td>
+            <td class="toggle-cell english-cell"
+              data-value="She will be presenting her project at the conference next Monday."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Dia akan sedang mempresentasikan proyeknya di konferensi Senin depan."></td>
+          </tr>
+          <tr>
+            <td class="text-center">18</td>
+            <td class="toggle-cell english-cell" data-value="They will be celebrating their anniversary this weekend.">
+            </td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Mereka akan sedang merayakan hari jadi mereka akhir pekan ini."></td>
+          </tr>
+          <tr>
+            <td class="text-center">19</td>
+            <td class="toggle-cell english-cell" data-value="We will be discussing the budget during the meeting."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami akan sedang membahas anggaran selama rapat."></td>
+          </tr>
+          <tr>
+            <td class="text-center">20</td>
+            <td class="toggle-cell english-cell" data-value="He will be taking a shower when you get home."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia akan sedang mandi ketika kamu sampai di rumah.">
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">21</td>
+            <td class="toggle-cell english-cell" data-value="I will be walking my dog at 6 AM tomorrow."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Saya akan sedang mengajak anjingku jalan-jalan jam 6 pagi besok."></td>
+          </tr>
+          <tr>
+            <td class="text-center">22</td>
+            <td class="toggle-cell english-cell" data-value="She will be reading a novel while on vacation."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia akan sedang membaca novel saat liburan."></td>
+          </tr>
+          <tr>
+            <td class="text-center">23</td>
+            <td class="toggle-cell english-cell" data-value="They will be watching the football match at 8 PM."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Mereka akan sedang menonton pertandingan sepak bola jam 8 malam."></td>
+          </tr>
+          <tr>
+            <td class="text-center">24</td>
+            <td class="toggle-cell english-cell" data-value="We will be packing our bags this time tomorrow."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami akan sedang mengemas tas kami pada jam ini besok.">
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">25</td>
+            <td class="toggle-cell english-cell" data-value="He will be watering the plants when the sun rises."></td>
+            <td class="toggle-cell indonesian-cell"
+              data-value="Dia akan sedang menyiram tanaman ketika matahari terbit."></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <a href="index.html" class="btn btn-outline-primary mt-3">← Kembali</a>
+  </div>
+
+  <!-- jQuery & DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+  <script src="js/card.js"></script>
+</body>
+
+</html>

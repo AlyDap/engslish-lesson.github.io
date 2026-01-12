@@ -4,201 +4,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Future Tense</title>
+  <title>3. Present Perfect</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/card.css">
 </head>
 
 <body class="bg-light">
-  <div class="container py-5">
-    <h1 class="mb-4">Future Tense</h1>
+  <div class="container py-5 px-0">
+    <h1 class="mb-4">3. Present Perfect</h1>
 
+    <!-- Alert -->
     <div class="alert alert-info mb-4">
-      <strong>Ada dua bentuk utama: <em>will</em> dan <em>be going to</em></strong><br><br>
+      <strong>Digunakan untuk:</strong><br>
+      • Aksi yang sudah terjadi tapi masih relevan sekarang <br>
+      • Pengalaman masa lalu tanpa menyebut waktu spesifik <br>
+      • Aksi yang baru saja selesai <br>
+      • Aksi yang dimulai di masa lalu dan masih berlangsung <br><br>
 
-      <strong>🔸 Will</strong><br>
-      • Keputusan spontan (baru diputuskan saat bicara)<br>
-      • Prediksi tanpa bukti kuat<br>
-      • Janji, tawaran, permintaan<br><br>
-
-      <strong>🔸 Be going to</strong><br>
-      • Rencana yang sudah dipikirkan sebelumnya<br>
-      • Prediksi berdasarkan bukti nyata (misal: awan gelap → akan hujan)
+      <strong>Struktur:</strong><br>
+      ✅ have/has + past participle (V3)
     </div>
 
-    <table id="vocabTable" class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th class="text-center" width="1">No</th>
-          <th>English</th>
-          <th>Indonesian</th>
-        </tr>
-      </thead>
-      <!-- ada 30 data -->
-      <tbody>
-        <!-- WILL -->
-        <tr>
-          <td>1</td>
-          <td>I will help you with your project.</td>
-          <td class="indonesian-cell" data-meaning="Aku akan membantumu dengan proyekmu.">*****</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>She will probably call you later.</td>
-          <td class="indonesian-cell" data-meaning="Dia mungkin akan meneleponmu nanti.">*****</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>I think it will rain tomorrow.</td>
-          <td class="indonesian-cell" data-meaning="Menurutku besok akan hujan.">*****</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>He will be 25 next month.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan berusia 25 bulan depan.">*****</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Don’t worry—I’ll carry that bag for you.</td>
-          <td class="indonesian-cell" data-meaning="Jangan khawatir—aku akan membawa tas itu untukmu.">*****</td>
-        </tr>
+    <!-- Toggle Bahasa -->
+    <div class="mb-3">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="languageToggle" id="showIndonesian" value="indonesian"
+          checked>
+        <label class="form-check-label" for="showIndonesian">Sembunyikan Indonesian</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="languageToggle" id="showEnglish" value="english">
+        <label class="form-check-label" for="showEnglish">Sembunyikan English</label>
+      </div>
+    </div>
 
-        <!-- BE GOING TO -->
-        <tr>
-          <td>6</td>
-          <td>I am going to study abroad next year.</td>
-          <td class="indonesian-cell" data-meaning="Aku akan kuliah di luar negeri tahun depan.">*****</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Look at those clouds! It’s going to rain.</td>
-          <td class="indonesian-cell" data-meaning="Lihat awan itu! Hujan akan turun.">*****</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>She is going to start a new job on Monday.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan mulai pekerjaan baru hari Senin.">*****</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>We are going to watch a concert this weekend.</td>
-          <td class="indonesian-cell" data-meaning="Kami akan menonton konser akhir pekan ini.">*****</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>He is going to buy a car soon.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan membeli mobil sebentar lagi.">*****</td>
-        </tr>
+    <!-- Tabel -->
+    <div class="table-responsive">
+      <table id="vocabTable" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="text-center" width="1">No</th>
+            <th class="text-left">English</th>
+            <th class="text-left">Indonesian</th>
+          </tr>
+        </thead>
+        <!-- ada 25 data -->
+        <tbody>
+          <!-- Data awal (1–5) -->
+          <tr>
+            <td class="text-center">1</td>
+            <td class="toggle-cell english-cell" data-value="I have finished my homework."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya sudah menyelesaikan PR-ku."></td>
+          </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td class="toggle-cell english-cell" data-value="She has visited Japan twice."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia pernah mengunjungi Jepang dua kali."></td>
+          </tr>
+          <tr>
+            <td class="text-center">3</td>
+            <td class="toggle-cell english-cell" data-value="We have lived here since 2020."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami tinggal di sini sejak tahun 2020."></td>
+          </tr>
+          <tr>
+            <td class="text-center">4</td>
+            <td class="toggle-cell english-cell" data-value="He has just eaten lunch."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia baru saja makan siang."></td>
+          </tr>
+          <tr>
+            <td class="text-center">5</td>
+            <td class="toggle-cell english-cell" data-value="They have never seen a whale."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Mereka belum pernah melihat paus."></td>
+          </tr>
 
-        <!-- WILL -->
-        <tr>
-          <td>11</td>
-          <td>I will send you the file by email.</td>
-          <td class="indonesian-cell" data-meaning="Aku akan mengirimkan file itu lewat email.">*****</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>They will arrive at the airport at 3 p.m.</td>
-          <td class="indonesian-cell" data-meaning="Mereka akan tiba di bandara jam 3 sore.">*****</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>She will graduate from university next month.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan lulus dari universitas bulan depan.">*****</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>We will not forget your birthday.</td>
-          <td class="indonesian-cell" data-meaning="Kami tidak akan melupakan ulang tahunmu.">*****</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>He will fix the broken chair later.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan memperbaiki kursi yang rusak nanti.">*****</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>I promise I will call you tonight.</td>
-          <td class="indonesian-cell" data-meaning="Aku janji aku akan meneleponmu malam ini.">*****</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>The meeting will start at 9 a.m. sharp.</td>
-          <td class="indonesian-cell" data-meaning="Rapat akan dimulai tepat jam 9 pagi.">*****</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>My parents will visit us next week.</td>
-          <td class="indonesian-cell" data-meaning="Orang tuaku akan mengunjungi kami minggu depan.">*****</td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td>It will be sunny all weekend.</td>
-          <td class="indonesian-cell" data-meaning="Cuaca akan cerah sepanjang akhir pekan.">*****</td>
-        </tr>
-        <tr>
-          <td>20</td>
-          <td>I think she will pass the exam easily.</td>
-          <td class="indonesian-cell" data-meaning="Menurutku dia akan lulus ujian dengan mudah.">*****</td>
-        </tr>
-
-        <!-- BE GOING TO -->
-        <tr>
-          <td>21</td>
-          <td>I am going to clean my room this afternoon.</td>
-          <td class="indonesian-cell" data-meaning="Aku akan membersihkan kamarku sore ini.">*****</td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td>They are going to move to Jakarta next month.</td>
-          <td class="indonesian-cell" data-meaning="Mereka akan pindah ke Jakarta bulan depan.">*****</td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>She is going to bake a cake for the party.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan membuat kue untuk pesta itu.">*****</td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td>We are going to take a vacation in December.</td>
-          <td class="indonesian-cell" data-meaning="Kami akan liburan pada bulan Desember.">*****</td>
-        </tr>
-        <tr>
-          <td>25</td>
-          <td>He is going to apply for a scholarship.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan mendaftar beasiswa.">*****</td>
-        </tr>
-        <tr>
-          <td>26</td>
-          <td>I’m going to learn how to drive this year.</td>
-          <td class="indonesian-cell" data-meaning="Aku akan belajar menyetir tahun ini.">*****</td>
-        </tr>
-        <tr>
-          <td>27</td>
-          <td>Look! That glass is going to fall!</td>
-          <td class="indonesian-cell" data-meaning="Lihat! Gelas itu akan jatuh!">*****</td>
-        </tr>
-        <tr>
-          <td>28</td>
-          <td>My brother is going to join the army.</td>
-          <td class="indonesian-cell" data-meaning="Kakak laki-lakiku akan masuk tentara.">*****</td>
-        </tr>
-        <tr>
-          <td>29</td>
-          <td>We are going to repaint the house soon.</td>
-          <td class="indonesian-cell" data-meaning="Kami akan mengecat ulang rumah sebentar lagi.">*****</td>
-        </tr>
-        <tr>
-          <td>30</td>
-          <td>She is going to meet her friend at the café.</td>
-          <td class="indonesian-cell" data-meaning="Dia akan bertemu temannya di kafe.">*****</td>
-        </tr>
-      </tbody>
-    </table>
+          <!-- Tambahan 20 contoh (6–25) -->
+          <tr>
+            <td class="text-center">6</td>
+            <td class="toggle-cell english-cell" data-value="I have read that book three times."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya sudah membaca buku itu tiga kali."></td>
+          </tr>
+          <tr>
+            <td class="text-center">7</td>
+            <td class="toggle-cell english-cell" data-value="She has lost her keys again."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia kehilangan kuncinya lagi."></td>
+          </tr>
+          <tr>
+            <td class="text-center">8</td>
+            <td class="toggle-cell english-cell" data-value="We have just received the package."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami baru saja menerima paketnya."></td>
+          </tr>
+          <tr>
+            <td class="text-center">9</td>
+            <td class="toggle-cell english-cell" data-value="He has worked here for five years."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia sudah bekerja di sini selama lima tahun."></td>
+          </tr>
+          <tr>
+            <td class="text-center">10</td>
+            <td class="toggle-cell english-cell" data-value="They have already left the office."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Mereka sudah meninggalkan kantor."></td>
+          </tr>
+          <tr>
+            <td class="text-center">11</td>
+            <td class="toggle-cell english-cell" data-value="I have never tried sushi before."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya belum pernah mencoba sushi sebelumnya."></td>
+          </tr>
+          <tr>
+            <td class="text-center">12</td>
+            <td class="toggle-cell english-cell" data-value="She has just sent the email."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia baru saja mengirim emailnya."></td>
+          </tr>
+          <tr>
+            <td class="text-center">13</td>
+            <td class="toggle-cell english-cell" data-value="We have seen that movie already."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami sudah menonton film itu."></td>
+          </tr>
+          <tr>
+            <td class="text-center">14</td>
+            <td class="toggle-cell english-cell" data-value="He has broken his phone screen."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia memecahkan layar ponselnya."></td>
+          </tr>
+          <tr>
+            <td class="text-center">15</td>
+            <td class="toggle-cell english-cell" data-value="They have visited Bali several times."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Mereka sudah mengunjungi Bali beberapa kali."></td>
+          </tr>
+          <tr>
+            <td class="text-center">16</td>
+            <td class="toggle-cell english-cell" data-value="I have known her since childhood."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya mengenalnya sejak kecil."></td>
+          </tr>
+          <tr>
+            <td class="text-center">17</td>
+            <td class="toggle-cell english-cell" data-value="She has forgotten her password."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia lupa kata sandinya."></td>
+          </tr>
+          <tr>
+            <td class="text-center">18</td>
+            <td class="toggle-cell english-cell" data-value="We have not decided yet."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami belum memutuskan."></td>
+          </tr>
+          <tr>
+            <td class="text-center">19</td>
+            <td class="toggle-cell english-cell" data-value="He has written three novels."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia sudah menulis tiga novel."></td>
+          </tr>
+          <tr>
+            <td class="text-center">20</td>
+            <td class="toggle-cell english-cell" data-value="They have just arrived at the station."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Mereka baru saja tiba di stasiun."></td>
+          </tr>
+          <tr>
+            <td class="text-center">21</td>
+            <td class="toggle-cell english-cell" data-value="I have cleaned the kitchen."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Saya sudah membersihkan dapur."></td>
+          </tr>
+          <tr>
+            <td class="text-center">22</td>
+            <td class="toggle-cell english-cell" data-value="She has never been to Europe."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia belum pernah ke Eropa."></td>
+          </tr>
+          <tr>
+            <td class="text-center">23</td>
+            <td class="toggle-cell english-cell" data-value="We have learned a lot today."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Kami sudah belajar banyak hari ini."></td>
+          </tr>
+          <tr>
+            <td class="text-center">24</td>
+            <td class="toggle-cell english-cell" data-value="He has already paid the bill."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Dia sudah membayar tagihannya."></td>
+          </tr>
+          <tr>
+            <td class="text-center">25</td>
+            <td class="toggle-cell english-cell" data-value="They have changed their plans."></td>
+            <td class="toggle-cell indonesian-cell" data-value="Mereka sudah mengubah rencana mereka."></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <a href="index.html" class="btn btn-outline-primary mt-3">← Kembali</a>
   </div>
@@ -208,6 +195,7 @@
   <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
   <!-- Custom JS -->
   <script src="js/script.js"></script>
+  <script src="js/card.js"></script>
 </body>
 
 </html>
