@@ -1,0 +1,28 @@
+/* Menyembunyikan overflow agar hover lebih rapi */
+.indonesian-cell {
+  position: relative;
+  cursor: help;
+  user-select: none;
+}
+
+.indonesian-cell:hover::after {
+  content: attr(data-meaning);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+  font-size: 0.9em;
+}
+
+/* Opsional: efek transisi halus */
+.indonesian-cell::before {
+  content: "*****";
+}
+.indonesian-cell:hover::before {
+  content: "";
+}
