@@ -16,36 +16,26 @@ $(document).ready(function () {
 
     // Fungsi update tampilan sel
     function updateCells() {
-      const mode = $('input[name="languageToggle"]:checked').val(); // 'indonesian' atau 'english'
+      const mode = $('input[name="languageToggle"]:checked').val();
+
       if (mode === "indonesian") {
+        // Sembunyikan Indonesian
         $(".english-cell").removeClass("hidden-text").addClass("visible-text");
         $(".indonesian-cell")
           .removeClass("visible-text")
           .addClass("hidden-text");
-      } else {
+      } else if (mode === "english") {
+        // Sembunyikan English
         $(".english-cell").removeClass("visible-text").addClass("hidden-text");
         $(".indonesian-cell")
           .removeClass("hidden-text")
           .addClass("visible-text");
+      } else if (mode === "all") {
+        // Tampilkan semua
+        $(".english-cell, .indonesian-cell")
+          .removeClass("hidden-text visible-text")
+          .addClass("visible-text");
       }
-
-      // $(".english-cell").each(function () {
-      //   $(this).removeClass("hidden-text visible-text");
-      //   if (mode === "indonesian") {
-      //     $(this).addClass("visible-text");
-      //   } else {
-      //     $(this).addClass("hidden-text");
-      //   }
-      // });
-
-      // $(".indonesian-cell").each(function () {
-      //   $(this).removeClass("hidden-text visible-text");
-      //   if (mode === "indonesian") {
-      //     $(this).addClass("hidden-text");
-      //   } else {
-      //     $(this).addClass("visible-text");
-      //   }
-      // });
     }
 
     // Event saat radio berubah

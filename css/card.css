@@ -1,6 +1,6 @@
 /* Styling dasar */
 .toggle-cell {
-  cursor: visible;
+  cursor: default;
   user-select: none;
   text-align: left !important;
 }
@@ -13,7 +13,6 @@
 /* Saat diizinkan tampil */
 .toggle-cell.visible-text::after {
   content: attr(data-value);
-  cursor: visible;
 }
 
 /* Saat disembunyikan → tampilkan ***** */
