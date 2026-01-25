@@ -1,0 +1,74 @@
+# --- Present Tenses (Primary/Blue) ---
+- judul: "Simple Present"
+  nomor: 1
+  contoh: "I eat rice."
+  link: "card1.html"
+  warna: "primary"
+
+- judul: "Present Continuous"
+  nomor: 2
+  contoh: "I am eating rice."
+  link: "card2.html"
+  warna: "primary"
+
+- judul: "Present Perfect"
+  nomor: 3
+  contoh: "I have eaten rice."
+  link: "card3.html"
+  warna: "primary"
+
+- judul: "Present Perfect Continuous"
+  nomor: 4
+  contoh: "I have been eating rice."
+  link: "card4.html"
+  warna: "primary"
+
+# --- Past Tenses (Success/Green) ---
+- judul: "Simple Past"
+  nomor: 5
+  contoh: "I ate rice."
+  link: "card5.html"
+  warna: "success"
+
+- judul: "Past Continuous"
+  nomor: 6
+  contoh: "I was eating rice."
+  link: "card6.html"
+  warna: "success"
+
+- judul: "Past Perfect"
+  nomor: 7
+  contoh: "I had eaten rice."
+  link: "card7.html"
+  warna: "success"
+
+- judul: "Past Perfect Continuous"
+  nomor: 8
+  contoh: "I had been eating rice."
+  link: "card8.html"
+  warna: "success"
+
+# --- Future Tenses (Danger/Red) ---
+- judul: "Simple Future"
+  nomor: 9
+  contoh: "I will eat rice."
+  link: "card9.html"
+  warna: "danger"
+
+- judul: "Future Continuous"
+  nomor: 10
+  contoh: "I will be eating rice."
+  link: "card10.html"
+  warna: "danger"
+
+- judul: "Future Perfect"
+  nomor: 11
+  contoh: "I will have eaten rice."
+  link: "card11.html"
+  warna: "danger"
+
+- judul: "Future Perfect Continuous"
+  nomor: 12
+  contoh: "I will have been eating rice."
+  link: "card12.html"
+  warna: "danger"

@@ -1,0 +1,16 @@
+<div class="col-lg-3 col-md-6">
+  <div class="card h-100 shadow-sm">
+    <div class="card-body d-flex flex-column position-relative">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="mb-0">{{ include.judul }}</h5>
+        <span class="badge bg-{{ include.warna }} rounded-pill position-absolute top-0 end-0 m-3">
+          {{ include.nomor }}
+        </span>
+      </div>
+      <p class="card-text">{{ include.contoh }}</p>
+      <a href="{{ include.link }}" class="btn btn-outline-{{ include.warna }} mt-auto">
+        Lihat Detail
+      </a>
+    </div>
+  </div>
+</div>
