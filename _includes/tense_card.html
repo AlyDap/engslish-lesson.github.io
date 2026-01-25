@@ -8,7 +8,7 @@
         </span>
       </div>
       <p class="card-text">{{ include.contoh }}</p>
-      <a href="{{ include.link }}" class="btn btn-outline-{{ include.warna }} mt-auto">
+      <a href="{{ include.link | relative_url }}" class="btn btn-outline-{{ include.warna }} mt-auto">
         Lihat Detail
       </a>
     </div>
